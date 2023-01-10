@@ -142,7 +142,7 @@ Errors can occur at the four structre levels of a program:
 **Code Examples:**
 
 ```C
-Semantic Error
+// Semantic Error
 
 #include <stdio.h>
 main() {
@@ -155,7 +155,7 @@ main() {
 > Division by zero while not in a decleration/initalization makes this a semantic error
 
 ```C
-Contexutal Error
+// Contexutal Error
 
 #include <stdio.h>
 main() {
