@@ -39,7 +39,7 @@ In general there are multiple diffrent levels of structure that you can find in 
 
     > **Sample BNF for a Very Simple Language (VSL):**
 
-    ```BNF
+    ```html
     <sentence>  ::= <subject> <verb> <object>
     <subject>   ::= <adjective> <noun>
     <adjective> ::= <adjective> | <adjective> <adjective>
@@ -50,7 +50,7 @@ In general there are multiple diffrent levels of structure that you can find in 
     ```
     In a way BNF describes replacement rules; a *\<sentence\>* becomes *"\<subject\> \<verb\> \<object\>"* and a *\<subject\>* becomes  *"\<adjective\> \<noun\>"* ect. Each symbol surrounded by brackets represets a **non-terminal** symbol. Symbols not surrounded by brackets are **terminal** symbols meaning there is no more replacement. Also note that the pipe `|` can be read as "or". Using this knowledge we can decent our grammer; VSL and create a *valid* sentence:
 
-    ```BNF
+    ```html
                                                     <sentence>
                                                         |
                                             <subject> <verb> <object>
@@ -80,7 +80,7 @@ In general there are multiple diffrent levels of structure that you can find in 
     ```
     > This is a valid sentence in VSL, each terminal can be traced back up to from the uderlying structre for a sentence: *"\<subject\> \<verb\> \<object\>"*
 
-    ```BNF
+    ```html
     `fast big high horse is good`
 
                                         fast big high    horse      is      good
