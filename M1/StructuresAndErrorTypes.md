@@ -10,7 +10,9 @@ In general there are multiple diffrent levels of structure that you can find in 
 
 - **Lexical** - *"tokens" the basic building blocks of a program*
 
-    - **Identifiers**: Names *(programmer chosen)* of objects of intrest *(variables, procedures, ect.)* usally bound by length, case sensitivity, allowable characters ect.
+    - **Identifiers**: Names *(programmer chosen)* of objects of intrest *(variables, procedures, ect.)* usally bound by 
+    length, case sensitivity, allowable characters ect.
+
     - **Keywords**: Names reserved by the language designer: *if, else, switch, int, float* 
     - **Operators**: +, -, <, ==
     - **Separators**: ;, (), . ect
@@ -97,4 +99,17 @@ In general there are multiple diffrent levels of structure that you can find in 
     *See **[Syntax Graphs](https://github.com/H-ANSEN/CSE240/blob/master/M1/SyntaxGraphs.md)** for more ways in which a languages syntax can be defined*
 
 - **Contextual**
+    
+    Contextual structure is the next level of structure in a program, at this level we know all pieces of our program are approximitly in the correct places sense our program has pased the lexical level and the syntatic level. Contextual *(Static Semantics)* structure usally defines the semantics before dynamic execution, *e.g.*,  variable initalization and typing. Type consistency is usally check by typing rules.
+
+    Say we have the following bit of Java code:
+
+    ```Java
+    String str = "abc";
+    int i;
+    i = 1 + str;
+    ```
+    
+    The declaration and assignment are syntactially correct, but the assignment statement is **contextually** incorrect. Compilers can preform these contextual checks at a very limited level sense a compiler only knows so much information.
+
 - **Semantic**
