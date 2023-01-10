@@ -1,5 +1,7 @@
 # Structures and Error Types
 
+## Structures
+
 When we write a program we wirte it according to certian rules based on the language we are writing in. 
 
 - Structure helps humans and computers agree on the behavior of code
@@ -96,7 +98,7 @@ In general there are multiple diffrent levels of structure that you can find in 
 
     When a programming language is compiled or interpreted the lexical tokens are analyzed and the from the bottom up to see if they form a valid structure in a programming languages specified grammer, its the exact same process seen above, this process is called **syntatic analysis**.
 
-    *See **[Syntax Graphs](https://github.com/H-ANSEN/CSE240/blob/master/M1/SyntaxGraphs.md)** for more ways in which a languages syntax can be defined*
+    *See **[Syntax Graphs](https://github.com/H-ANSEN/CSE240/blob/master/M1/SyntaxGraphs.md)** for more ways in which a languages syntical structure can be defined*
 
 - **Contextual**
     
@@ -113,3 +115,18 @@ In general there are multiple diffrent levels of structure that you can find in 
     The declaration and assignment are syntactially correct, but the assignment statement is **contextually** incorrect. Compilers can preform these contextual checks at a very limited level sense a compiler only knows so much information.
 
 - **Semantic**
+
+    Semantics describes the meaning of a program. Semantic errors cannot be detected by the compiler, for example take a look at the following:
+
+    ```Java
+    int x = 0;
+    int y = 5;
+    int z = y / x;
+    ```
+
+    Here there is an issue within the meaning of the program, each statement is valid but division by zero is being preformed which will throw an error. To be able to catch this error the program would need to run and the compiler would fail.
+
+    - No formal definition for imperative and object-oriented languages
+    - Functional programming languages hava formal semantic definition based on the mathematics used *(see lambda calculus)*
+    - In logic programming languages, logic expressions are often used for describing the sementics
+    - Semantic languages: *e.g*, Prolog, RDF and OWL
