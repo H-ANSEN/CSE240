@@ -54,13 +54,13 @@ In general there are multiple diffrent levels of structure that you can find in 
                                                     <sentence>
                                                         |
                                             <subject> <verb> <object>
-                                            /           |          \
-                            <adjective> <noun>        makes      <subject>
-                              /           |                             \
-                            big         horse                          <adjective> <noun>
-                                                                            |          \
-                                                                         big fast    computer
-    ```
+                                             /          |          \
+                             <adjective> <noun>       makes       <subject>
+                               /           |                             \
+                             big         horse                          <adjective> <noun>
+                                                                             |          \
+                                                                          big fast    computer
+    ``` 
     > The tree above defines a valid sentence "big horse makes big fast computer" in the grammer defined by VSL
 
     Not only can we use a grammer to produce output that conforms to that grammer but we can also work in the other direction and check if an output is vaild in a particular grammer. Rather than working from a top-down direction we work from a bottom-up:
@@ -93,6 +93,8 @@ In general there are multiple diffrent levels of structure that you can find in 
     > This is an invalid sentence in VSL, remeber to create a sentece we must have *"\<subject\> \<verb\> \<object\>"* in the sentence above we have the first two non-terminals subject and verb but there is no possible way to create an object from "good". The only way this would be possible is if good was followed by a noun.
 
     When a programming language is compiled or interpreted the lexical tokens are analyzed and the from the bottom up to see if they form a valid structure in a programming languages specified grammer, its the exact same process seen above, this process is called **syntatic analysis**.
+
+    *See **[Syntax Graphs](https://github.com/H-ANSEN/CSE240/blob/master/M1/SyntaxGraphs.md)** for more ways in which a languages syntax can be defined*
 
 - **Contextual**
 - **Semantic**
