@@ -63,5 +63,36 @@ In general there are multiple diffrent levels of structure that you can find in 
     ```
     > The tree above defines a valid sentence "big horse makes big fast computer" in the grammer defined by VSL
 
+    Not only can we use a grammer to produce output that conforms to that grammer but we can also work in the other direction and check if an output is vaild in a particular grammer. Rather than working from a top-down direction we work from a bottom-up:
+
+    ```BNF
+    `big high table is good table`
+
+                                    big high table      is        good          table 
+                                       /       |        |           |             \
+                              <adjective>    <noun>     |       <adjective>      <noun>
+                                     |         |        |               \         /
+                                     |         |        |                <subject> 
+                                      \       /         |                   |
+                                      <subject>      <verb>             <object>
+                                          \             |                   /
+                                           -------- <sentence> -------------
+    ```
+    > This is a valid sentence in VSL, each terminal can be traced back up to from the uderlying structre for a sentence: *"\<subject\> \<verb\> \<object\>"*
+
+    ```BNF
+    `fast big high horse is good`
+
+                                        fast big high    horse      is      good
+                                           /               |        |          \
+                                     <adjective>         <noun>     |         <adjective>
+                                         |                 |        |
+                                         ---- <subject> ----      <verb>                
+                         
+    ```
+    > This is an invalid sentence in VSL, remeber to create a sentece we must have *"\<subject\> \<verb\> \<object\>"* in the sentence above we have the first two non-terminals subject and verb but there is no possible way to create an object from "good". The only way this would be possible is if good was followed by a noun.
+
+    When a programming language is compiled or interpreted the lexical tokens are analyzed and the from the bottom up to see if they form a valid structure in a programming languages specified grammer, its the exact same process seen above, this process is called **syntatic analysis**.
+
 - **Contextual**
 - **Semantic**
