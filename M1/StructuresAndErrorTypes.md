@@ -65,7 +65,7 @@ In general there are multiple diffrent levels of structure that you can find in 
 
     Not only can we use a grammer to produce output that conforms to that grammer but we can also work in the other direction and check if an output is vaild in a particular grammer. Rather than working from a top-down direction we work from a bottom-up:
 
-    ```BNF
+    ```html
     `big high table is good table`
 
                                     big high table      is        good          table 
