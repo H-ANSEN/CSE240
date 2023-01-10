@@ -14,7 +14,6 @@ In general there are multiple diffrent levels of structure that you can find in 
 
     - **Identifiers**: Names *(programmer chosen)* of objects of intrest *(variables, procedures, ect.)* usally bound by 
     length, case sensitivity, allowable characters ect.
-
     - **Keywords**: Names reserved by the language designer: *if, else, switch, int, float* 
     - **Operators**: +, -, <, ==
     - **Separators**: ;, (), . ect
@@ -130,3 +129,37 @@ In general there are multiple diffrent levels of structure that you can find in 
     - Functional programming languages hava formal semantic definition based on the mathematics used *(see lambda calculus)*
     - In logic programming languages, logic expressions are often used for describing the sementics
     - Semantic languages: *e.g*, Prolog, RDF and OWL
+
+## Error Types
+
+Errors can occur at the four structre levels of a program:
+
+- **Lexical Errors** - Compiler can detect all lexical errors
+- **Syntatical Errors** - Compiler can detect all of them
+- **Contextual Errors** - Include errors in *variable declaration, variable initalization, and type inconsistency in assignment.* Compiler implementations *may or may not dectect* all initalization errors, depending on if they compute the initialization experssion or not. For example `int x = 5 / (3 - 3)`, the compiler may not detect this
+- **Semantic Errors** - Include all the errors in the statements that will be executed after passing compilation.
+
+**Code Examples:**
+
+```C
+Semantic Error
+
+#include <stdio.h>
+main() {
+    int x = 0, y, z;
+    x = 3;
+    y = 5;
+    z = y / (y - x - 2);
+}
+```
+> Division by zero while not in a decleration/initalization makes this a semantic error
+
+```C
+Contexutal Error
+
+#include <stdio.h>
+main() {
+    int x = 3, y = 5, z = y / (y - x - 2);
+}
+```
+> Division by zero in variable decleration makes this a contextual error
